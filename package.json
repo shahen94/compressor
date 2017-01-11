@@ -1,0 +1,16 @@
+{
+  "name": "compressor",
+  "version": "1.0.0",
+  "description": "Compress Base64 String, using LSW algorithm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "compress",
+    "LSW",
+    "base64"
+  ],
+  "author": "Shahen Hovhannisyan <shahen.hovhannisyan.94@gmail.com>",
+  "license": "MIT"
+}
