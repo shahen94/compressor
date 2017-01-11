@@ -1,5 +1,5 @@
 {
-  "name": "compressor",
+  "name": "compressor-base64",
   "version": "1.0.0",
   "description": "Compress Base64 String, using LSW algorithm",
   "main": "index.js",
