@@ -25,7 +25,7 @@ class Compressor {
     }
     return out.join("");
   }
-  static decompress(data) {
+  static decompress(s) {
     let dict = {};
     let data = (s + "").split("");
     let currChar = data[0];
