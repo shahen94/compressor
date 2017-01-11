@@ -27,26 +27,27 @@ class Compressor {
   }
   static decompress(data) {
     let dict = {};
-    let currChar = String.fromCharCode(data[0]);
+    let data = (s + "").split("");
+    let currChar = data[0];
     let oldPhrase = currChar;
     let out = [currChar];
     let code = 256;
     let phrase;
-    for (let i = 1; i < data.length; i++) {
-
-        let currCode = data[i];
+    for (let i=1; i<data.length; i++) {
+        let currCode = data[i].charCodeAt(0);
         if (currCode < 256) {
-            phrase = String.fromCharCode(data[i]);
-        } else {
-            phrase = dict[currCode] ? dict[currCode] : (oldPhrase + currChar);
+            phrase = data[i];
         }
-        out += phrase;
-        currChar = phrase[0];
+        else {
+           phrase = dict[currCode] ? dict[currCode] : (oldPhrase + currChar);
+        }
+        out.push(phrase);
+        currChar = phrase.charAt(0);
         dict[code] = oldPhrase + currChar;
         code++;
         oldPhrase = phrase;
     }
-    return out;
+    return out.join("");
   }
 }
 
